@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2, // Manifest 버전 명시. 공식문서 가이드에 따라 `2`로 고정
+  "name": "Leo begins", // 확장 프로그램 이름
+  "description": "Beautiful new Tab",
+  "version": "1.0", // 확장 프로그램 버전
+
+  "browser_action": {
+    "default_icon": "icon.png" // 확장 프로그램의 아이콘
+  },
+
+  // // 리소스에 대한 보안정책을 설정. 줄여서 CSP라고 불린다.
+  // "content_security_policy":  "script-src 'self' 'unsafe-eval'; script-src-elem 'self' 'unsafe-eval' https://ssug.api.search.zum.com https://contentsgt.cafe24.com; object-src 'self'; img-src chrome://favicon/ https://*.zumst.com/;",
+
+  "chrome_url_overrides": {
+    "newtab": "index.html" // 새 탭을 열었을 때 보여지는 페이지를 설정할 수 있습니다.
+  }
+}
+
+// https://zuminternet.github.io/Zum-Chrome-Extension/
